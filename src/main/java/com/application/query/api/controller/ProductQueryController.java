@@ -24,8 +24,9 @@ public class ProductQueryController {
 	public List<ProductRestModal> getAllProducts(){
 		GetProductsQuery getProductsQuery = new GetProductsQuery();
 		
-		List<ProductRestModal> productRestModal = queryGateway.query(getProductsQuery,ResponseTypes.multipleInstancesOf(ProductRestModal.class)).join();
-		return productRestModals;
+		List<ProductRestModal> productRestModal = queryGateway.query(getProductsQuery,
+				ResponseTypes.multipleInstancesOf(ProductRestModal.class)).join();
+		return productRestModal;
 		
 	}
 }
